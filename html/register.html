@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>快乐购商城 - 用户注册</title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+	</head>
+
+	<body>
+		<!--顶部图片-->
+		<div id="register">
+			<div id="top" class="clearfix">
+				<div class="top_left fl">
+					<a href="#/">
+						<img src="../img/logo.jpg" /></a>
+				</div>
+				<div class="top_right fr">
+					<img src="../img/top_center.jpg" />
+				</div>
+			</div>
+
+			<!--注册表单-->
+			<div id="con" class="clearfix">
+				<div class="con_left">
+					<a href="###"><img src="../img/login_con.jpg"/> </a>
+				</div>
+				<div class="con_right">
+					<div class="text">
+						<h2>用户注册</h2>
+						<a href="login.html" target="_parent">在此登录</a>
+						<span>已有账号</span>
+					</div>
+					<form id="register_form">
+						<div class="item item1">
+							<input type="text" id="tel" class="itxt" placeholder="请输入手机号码" maxlength="11" />
+							<span id="span_tel">请输入11位手机号码</span>
+						</div>
+						<div class="item item2">
+							<input type="text" id="getCode" class="itxt itxt_yzm" placeholder="验证码" />
+							<input type="button" id="code" value="获取短信验证码" />
+							<span id="span_getCode">请输入发送给您手机上的验证码</span>
+						</div>
+						<div class="item item3">
+							<input type="password" id="password" class="itxt" placeholder="请输入的密码" />
+							<span id="span_password">请输入您的密码，您的密码可能为字母、数字或符号的组合</span>
+						</div>
+						<div class="item item4">
+							<input type="password" id="checkPassWord" class="itxt" placeholder="请再次输入的密码" />
+							<span id="span_checkPassWord">请输入您的密码，您的密码可能为字母、数字或符号的组合</span>
+						</div>
+						<div class="item item5">
+							<input type="text" id="captcha" class="itxt itxt_yzm" placeholder="验证码" />
+							<input type="button" id="getCaptcha" disabled="disabled"/>
+							<a id="replace" href="###">换一张</a>
+							<span id="span_replace">请输入右侧验证码</span>
+						</div>
+						<a href="#" id="registerBtn">立即注册</a>
+						<input type="checkbox" id="jdcheckbox" checked="checked" />
+						<label for="autoLogin">注册即表示同意快乐购<a href="###">《用户服务协议》</a>条款</label>
+					</form>
+				</div>
+			</div>
+
+			<!--底部-->
+			<div id="footer">
+				<div class="footer">
+					<p>
+						<span class="font_arial">Copyright© 2006-2016 happigo. All Rights Reserved </span> 免费服务热线: 400-705-1111 | 固话也可拨打: 400-705-8800
+						<span class="font_arial">E-Mail: service@happigo.com</span><br> 湘ICP备17009657号 信息网络传播视听节目许可证号：1810530
+					</p>
+					<p class="footer_p">
+						<a href="#">
+							<img src="../img/foot_img3.png"></a>
+						<a href="#" ">
+							<img src="../img/foot_img4.png "></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../lib/common.js" ></script>
+	<script type="text/javascript" src="../lib/jquery-1.10.1.min.js" ></script>
+	<script type="text/javascript" src="../js/register.js" ></script>
+</html>

@@ -1,0 +1,101 @@
+/*1.清除默认样式*/
+
+/*常用标签清除外距*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img, input, button, figure, menu, fieldset{
+    margin:0; 
+    padding:0;
+}
+
+/*视情况去掉部分标签以及聚焦时的边框和外线*/
+ button, fieldset{
+    border: 0 none;
+}
+select:focus, fieldset:focus, input:focus, button:focus{
+    outline: 0 none;
+}
+
+/*清除列表默认样式*/
+ul, li, ol, dir, menu{
+    list-style:none;
+}
+
+select, input {
+    vertical-align:middle;
+}
+
+/*防止拖动*/
+textarea {
+    resize:none;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+/*  当a标签嵌套img,在IE6里会出现蓝色边框 方法：border:0 none;*/
+img {
+    border:0 none;
+    vertical-align:middle;
+}  
+
+table {
+    border-collapse:collapse;
+}
+
+/*设置h标签的大小，设置与根元素或父元素一样大的字体font-size:100%;*/
+h1,h2,h3,h4,h5,h6 {
+    font-weight:normal;
+    font-size: 1em;
+    font-size: 1rem;
+} 
+
+/*清除部分内联标签默认样式*/
+s,i,em,a{
+    font-style:normal;
+    text-decoration:none;
+}
+
+
+/*2.添加公共样式*/
+
+/*清除浮动*/
+.clearfix:before, .clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+
+/* 万能解决高度塌陷*/
+.mgfall:after{
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+} 
+
+/*公共类*/
+.con{
+    width: 1100px;
+    margin: 0 auto;
+}
+.content_part {
+    width: 900px;
+    margin-left: 300px;
+    box-shadow: 10px 0 10px -5px #DDD inset;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.ac {
+    text-align: center;
+}
+.hide {
+    display: none;
+}

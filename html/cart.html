@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>快乐购商城 - 购物车</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<link rel="stylesheet" href="../css/carts.css" />
+		<link rel="stylesheet" href="../css/header.css" />
+	</head>
+
+	<body>
+		<div class=" header">
+				<!--header顶部-->
+				<div class="header_top clearfix" style="width: 1100px">
+					<div class="fl">
+						<div class="login_1">
+							<span class="top_text">欢迎来到快乐购！</span>
+							<a href="/1.kuailegou/html/login.html" class="a_login" target="_parent">[登录] </a>
+							<a href="/1.kuailegou/html/register.html" class="a_reg" target="_parent">[免费注册]</a>
+						</div>
+						<div class="login_2">
+							<span class="top_text">欢迎<a href="###" id="username">aaa</a>来到快乐购！</span>
+							<a href="###" class="signOut">[退出]</a>
+						</div>
+					</div>
+					<div class="fr">
+						<ul>
+							<li>
+								<a href="###">合作招商</a>
+								<span class="line"></span> </li>
+							<li>
+								<a href="###">订单查询</a>
+								<span class="line"></span></li>
+							<li>
+								<a href="###">我的快乐购</a>
+								<span class="line"></span></li>
+							<li>
+								<span class="sp_tel">400-705-1111</span>
+								<span class="line"></span> </li>
+							<li class="li_dl">
+								<a href="###">下载快乐购app</a>
+								<span class="line"></span>
+								<div class="down_load_img">
+									<div class="down_load_border">
+										<img src="../img/down_load_20190509.jpg" style="max-width: 220px">
+									</div>
+								</div>
+							</li>
+							<li class="cus_box">
+								<a href="###">客服中心↓</a>
+								<div class="cus_center">
+									<a href="###">帮助中心</a>
+									<a href="###">会员反馈</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		<section class="cartMain">
+			<div class="cartMain_hd">
+				<ul class="order_lists cartTop">
+					<li class="list_chk">
+						<!--所有商品全选-->
+						<input type="checkbox" id="all" class="whole_check">
+						<label for="all"></label> 全选
+					</li>
+					<li class="list_con">商品信息</li>
+					<li class="list_info">商品参数</li>
+					<li class="list_price">单价</li>
+					<li class="list_amount">数量</li>
+					<li class="list_sum">金额</li>
+					<li class="list_op">操作</li>
+				</ul>
+			</div>
+
+			<div class="cartBox">
+				<div class="shop_info">
+					<div class="all_check">
+						<!--店铺全选-->
+						<input type="checkbox" id="shop_a" class="shopChoice">
+						<label for="shop_a" class="shop"></label>
+					</div>
+					<div class="shop_name">
+						<span class="shop_h2_zy ">自营</span>
+						<span class="a_shopname">快乐购</span>
+					</div>
+				</div>
+				<div class="order_content">
+					<!--渲染-->
+				</div>
+			</div>
+
+			<!--底部-->
+			<div class="bar-wrapper">
+				<div class="bar-right">
+					<div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+					<div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+					<div class="calBtn">
+						<a href="javascript:;">结算</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="model_bg"></section>
+		<section class="my_model">
+			<p class="title">删除宝贝<span class="closeModel">X</span></p>
+			<p>您确认要删除该宝贝吗？</p>
+			<div class="opBtn">
+				<a href="javascript:;" class="dialog-sure">确定</a>
+				<a href="javascript:;" class="dialog-close">关闭</a>
+			</div>
+		</section>
+		<div id="com_footer"></div>
+	</body>
+	<script type="text/javascript" src="../lib/common.js" ></script>
+	<script type="text/javascript" src="../lib/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/head.js" ></script>
+	<script type="text/javascript" src="../js/carts.js"></script>
+	<script type="text/javascript">
+		$('#com_footer').load('foot.html');
+	</script>
+</html>
