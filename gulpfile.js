@@ -84,5 +84,5 @@ task('imageMin', function() {
 		.pipe(dest('dist/img'))
 })
 
-task('default', parallel('htmlMin', 'uglify', 'cleancss', 'indexMin','libMin','imageMin'))
+task('default', parallel('htmlMin', 'uglify', 'cleancss', 'indexMin','libMin'))
 watch('src', series('default'))
