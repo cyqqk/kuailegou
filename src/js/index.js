@@ -123,7 +123,6 @@ document.onscroll = function() {
 	if(scrollTop >= iH) {
 		//第一次到达临界点
 		if(ipage == pages) {
-			$('#load_img').css('display', 'none');
 			$('.end').css('display', 'block')
 			return;
 		} else {
@@ -134,7 +133,7 @@ document.onscroll = function() {
 				ipage++;
 				setTimeout(function() {
 					$('#load_img').css('display', 'none');
-//					ajax
+					//					ajax
 					$.ajax({
 						type: "post",
 						url: "api/list.php",
@@ -167,7 +166,7 @@ document.onscroll = function() {
 							$('#create_list').html($('#create_list').html() + $res);
 						}
 					});
-//					ajax
+					//					ajax
 					//开关的功能：阻止临界点的多次触发，造成一次加载多页的bug
 					isok = true;
 				}, 1000);
@@ -179,6 +178,37 @@ document.onscroll = function() {
 }
 
 //点击跳转详情页
-$('#create_list').on('click','li',function(){
-	window.open("html/details.html?"+$(this).attr('data-id'));
-})
+$('#create_list').on('click', 'li', function() {
+	window.open("html/details.html?" + $(this).attr('data-id'));
+});
+
+//倒计时
+var endtime = '2019-9-16 23:51:10';
+var end = Date.parse(endtime);
+//console.log(end)
+
+function setTime(time) {
+	var sec = time % 60;
+	var min = parseInt(time / 60) % 60;
+	var hour = parseInt(time / 60 / 60) % 24;
+	var day = parseInt(time / 60 / 60 / 24)
+	return {
+		secs: sec,
+		mins: min,
+		hours: hour,
+		days: day
+	}
+}
+
+function showtime() {
+	var nowtime = Date.now();
+	var dix = parseInt((end - nowtime) / 1000)
+	if(dix <= 0) {
+		clearInterval(timer);
+	} else {
+		var time = setTime(dix);
+		$('.djs_time').html(`${time.days}天${time.hours}时${time.mins}分${time.secs}秒`);
+	}
+}
+showtime() //一开始就运行showtime（）
+var timer = setInterval(showtime, 1000);

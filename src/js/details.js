@@ -1,4 +1,5 @@
 ;
+
 (function() {
 	var EventUtil, Get, Element;
 	EventUtil = {
@@ -409,6 +410,7 @@ $.ajax({
 	},
 	success: function(str) {
 		var obj = JSON.parse(str);
+		console.log(obj);
 		$('.price_now').html('¥ ' + obj.price);
 		$('.costprice').html('￥ ' + obj.costprice);
 		$('.detail_tit').html(obj.title);

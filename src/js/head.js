@@ -1,10 +1,9 @@
 //地址
-var address = 'http://localhost:1903';
+var address = '';
 
 //判断是否已登录
 var getcookie = getCookie('name');
 
-//console.log(getcookie)
 function init() {
 	$('#getcaptcha').val(randomCode()).css('color', randomColor(16));
 	getcookie = getCookie('name');
@@ -63,7 +62,7 @@ $('#loginsubmit').click(function() {
 	if($('#right_column_captcha').val().toLowerCase() == $('#getcaptcha').val().toLowerCase()) {
 		$.ajax({
 			type: "post",
-			url:  address+"/1.kuailegou/api/login.php",
+			url:  address+"/1.kuailegou/src/api/login.php",
 			async: true,
 			data: {
 				tel: $('#right_column_user_name').val(),
@@ -86,7 +85,6 @@ $('#loginsubmit').click(function() {
 
 //退出清空cookie
 $('.signOut').click(function() {
-	console.log(1)
 	setCookie('name', ' ', -1);
 	init()
 })
@@ -118,31 +116,31 @@ $('#toTop').click(function(){
 
 $('.li_has_down a').on('click',function(){
 	var str = $(this).html();
-	window.location.href = address +'/1.kuailegou/html/list.html?'+ str;
+	window.location.href = address +'/1.kuailegou/src/html/list.html?'+ str;
 });
 
 //购物车
 $('#shop_car').click(function(){
 	if(getcookie){
-		window.location.href = address+'/1.kuailegou/html/cart.html';
+		window.location.href = address+'/1.kuailegou/src/html/cart.html';
 	}else{
 		alert('你还未登录')
 	}
 });
 $('.center_car').click(function(){
 	if(getcookie){
-		window.location.href = address+'/1.kuailegou/html/cart.html';
+		window.location.href = address+'/1.kuailegou/src/html/cart.html';
 	}else{
 		alert('你还未登录')
 	}
 });
 
 $('.btn_search').click(function(){
-	window.location.href = address +'/1.kuailegou/html/list.html?thekeyword='+ $('#keyword').val();
+	window.location.href = address +'/1.kuailegou/src/html/list.html?thekeyword='+ $('#keyword').val();
 });
 
 $('.f_btn_search').click(function(){
-	window.location.href = address + '/1.kuailegou/html/list.html?thekeyword='+ $('#keyword_fix').val();
+	window.location.href = address + '/1.kuailegou/src/html/list.html?thekeyword='+ $('#keyword_fix').val();
 });
 
 
@@ -151,7 +149,7 @@ $('.f_btn_search').click(function(){
 if(getcookie){	
 	$.ajax({
 		type: "post",
-		url: address + "/1.kuailegou/api/carts.php",
+		url: address + "/1.kuailegou/src/api/carts.php",
 		async: true,
 		data: {
 			user: getcookie
